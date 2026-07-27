@@ -44,3 +44,6 @@ dioptas = "dioptas"
 
 [environments]
 terminal = { features = [], solve-group = "default" }
+
+[activation.env]
+QT_API = "PyQt5"
