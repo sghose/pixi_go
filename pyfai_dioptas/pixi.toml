@@ -17,33 +17,24 @@ numpy = ">=1.26.0,<2.0.0"
 pillow = "*"
 #scipy = "*"
 ipympl = "*"
-pyqt = "*"
 pyfai-base = "==2025.3.0"
 hdf5plugin = ">=5.0.0,<6.0.0"
 
 [pypi-dependencies]
 dioptas = "*"
+pyqt5 = "*"
 
 [tasks]
 ipython = "ipython"
 lab = "jupyter lab"
-pyfai = "pyFAI-calib2"
 dioptas = "dioptas"
 
-[target.osx.tasks]
-#pyfai = '''
-#python -c "
-#import os
-#import PyQt5
-#os.environ['QT_API'] = 'PyQt5'
-
-#from dioptas import main
-#main()
-#"
-#'''
+[tasks.pyfai]
+cmd = "pyFAI-calib2"
+env = { QT_API = "PyQt5" }
 
 [environments]
 terminal = { features = [], solve-group = "default" }
 
 [activation.env]
-QT_API = "PyQt5"
+QT_API = "PyQt6"
