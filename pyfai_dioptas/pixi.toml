@@ -11,7 +11,7 @@ ipython = "*"
 psutil = "==5.9.8"
 qtawesome = "*"
 jupyterlab = "*"
-#matplotlib = "*"
+matplotlib = "*"
 numpy = ">=1.26.0,<2.0.0"
 #pandas = "==2.1.1"
 pillow = "*"
@@ -19,6 +19,7 @@ pillow = "*"
 ipympl = "*"
 pyfai-base = "==2025.3.0"
 hdf5plugin = ">=5.0.0,<6.0.0"
+freetype = "*"
 
 [pypi-dependencies]
 dioptas = "*"
@@ -38,3 +39,4 @@ terminal = { features = [], solve-group = "default" }
 
 [activation.env]
 QT_API = "PyQt6"
+LD_PRELOAD = "$CONDA_PREFIX/lib/libfreetype.so.6"
